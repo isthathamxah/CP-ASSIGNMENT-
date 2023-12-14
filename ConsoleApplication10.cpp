@@ -1,31 +1,40 @@
-﻿
-Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.4.33213.308
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ConsoleApplication10", "ConsoleApplication10\ConsoleApplication10.vcxproj", "{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}"
-EndProject
-Global
-	GlobalSection(SolutionConfigurationPlatforms) = preSolution
-		Debug|x64 = Debug|x64
-		Debug|x86 = Debug|x86
-		Release|x64 = Release|x64
-		Release|x86 = Release|x86
-	EndGlobalSection
-	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Debug|x64.ActiveCfg = Debug|x64
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Debug|x64.Build.0 = Debug|x64
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Debug|x86.ActiveCfg = Debug|Win32
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Debug|x86.Build.0 = Debug|Win32
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Release|x64.ActiveCfg = Release|x64
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Release|x64.Build.0 = Release|x64
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Release|x86.ActiveCfg = Release|Win32
-		{3DD4CE46-D4F7-4E6B-81BA-AE93D68C6996}.Release|x86.Build.0 = Release|Win32
-	EndGlobalSection
-	GlobalSection(SolutionProperties) = preSolution
-		HideSolutionNode = FALSE
-	EndGlobalSection
-	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {9DA7AC33-0A62-42E6-B9F5-3CA56998D044}
-	EndGlobalSection
-EndGlobal
+#include<iostream>
+using namespace std;
+
+int main() {
+	int user_input, result;
+	cout << "Enter your number";
+		cin >> user_input;
+
+		if (user_input < 0) {
+			result = -1;
+		}
+		else if (user_input >= 0 && user_input <= 5) {
+			result = 0;
+		}
+		else if (user_input >= 6 && user_input <= 12) {
+			result = 1;
+		}
+		else if (user_input >= 13 && user_input <= 19) {
+			result = 2;
+		}
+		else if (user_input >= 20 && user_input <= 50) {
+			result = 3;
+		}
+		else if (user_input >= 51 && user_input <= 60) {
+			result = 4;
+		}
+		else if (user_input >= 61 && user_input <= 101) {
+			result = 5;
+		}
+		else if (user_input > 101) {
+			result = -1;
+		}
+		else {
+			cout << "Invalid Input";
+		}
+
+		cout << "RESULT :" << result;
+	
+	return 0;
+}
